@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone - Explore The World</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">GAMEZONE</div>
+            <ul>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Turps</a></li>
+                <li class="more-dropdown">
+                    <button class="more-button">More</button>
+                    <div class="dropdown-content">
+                        <a href="#">Option 1</a>
+                        <a href="#">Option 2</a>
+                        <a href="#">Option 3</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="icons">
+                <a href="#"><i class="fa-solid fa-phone"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="hero-main">
+        <div class="hero">
+            <div class="hero-text">
+                <h1 class="hero-head">Explore The World <br>with Ease</h1>
+                <p class="hero-para">
+                    Get the affordable ticket for you in every season without any worries.<br>
+                    We are also giving a special offer on a round-trip for some destinations, so you can earn points from it!
+                </p>
+                <div class="hero-btn">
+                    <button>More Details</button>
+                </div>
+            </div>
+
+            <!-- Card Slider -->
+            <div class="slider-container">
+                <button id="prev" class="nav-btn">&lt;</button>
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <div class="card card1">
+                            <div class="card-details">
+                                <div class="card-head">London</div>
+                                <div class="other-details">
+                                    <span class="price">$400</span>
+                                    <span class="info">Round Trip</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card2">
+                            <div class="card-details">
+                                <div class="card-head">New York</div>
+                                <div class="other-details">
+                                    <span class="price">$450</span>
+                                    <span class="info">Round Trip</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card3">
+                            <div class="card-details">
+                                <div class="card-head">Paris</div>
+                                <div class="other-details">
+                                    <span class="price">$500</span>
+                                    <span class="info">Round Trip</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="next" class="nav-btn">&gt;</button>
+            </div>
+        </div>
+
+        <!-- Search Bar with Layered Effect -->
+        <div class="search-bar">
+            <div class="search-header">
+                <ul>
+                    <li>Games</li>
+                    <li>Turfs</li>
+                    <li>Speacial Offers</li>
+                </ul>
+            </div>
+            <div class="search-bar-content">
+                <input type="text" placeholder="Search Games">
+                <div class="input-container">
+                    <input type="text" placeholder="Enter Location">
+                    <i class="fa-solid fa-location-dot location-icon"></i>
+                </div>
+                <div class="custom-date-input">
+                    <div class="date-display" id="date-field">
+                        <span class="day-month">Fri,</span>
+                        <span class="date-number">15<sup>th</sup></span>
+                        <span class="day-month">March</span>
+                    </div>
+                
+                    <div class="calendar-container" id="calendar">
+                        <div class="calendar-navigation">
+                            <select id="month-select"></select>
+                            <select id="year-select"></select>
+                        </div>
+                        <div class="calendar-header">
+                            <div>Su</div><div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div>
+                        </div>
+                        <div class="calendar-days" id="calendar-days"></div>
+                    </div>
+                </div>
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="explore">
+       <div class="explore-main">
+        <h2>Explore The World with Ease</h2>
+         <div class="explore-section">
+            <div class="explore-left">
+                <div class="explorecard">
+                    <div class="card-img">
+                        <span class="discount">10% Discount</span>
+                        <img src="turf1.jpg" alt="truf1">
+                    </div>
+                <div class="expo-head">Tips and tricks: Puppy and Kitten First Grooming</div>
+                    <div class="expo-details">Offers a brief guide to the initial care of puppies and kittens, providing practical tips for a positive and comfortable experience.</div>
+                    <div class="expo-btn"><a href="#">Book Now <i class="fa-solid fa-greater-than"></i></a></div>
+                </div>
+                <div class="explorecard">
+                    <div class="card-img">
+                        <span class="discount">2% Discount</span>
+                        <img src="turf2.jpg" alt="truf2">
+                    </div>    
+                    <div class="expo-head">Cat Health - Ensuring Their Purring Health</div>
+                    <div class="expo-details">Provides simple guidelines to ensure your cat's optimal health, including regular grooming, a healthy diet, and health signs to look out for.</div>
+                    <div class="expo-btn"><a href="#">Book Now <i class="fa-solid fa-greater-than"></i></a></div>
+                </div>
+            </div>
+            <div class="explore-right">
+                <h2>See All Turfs</h2>
+                <div class="truf-list">
+                    <div class="turf-tile">
+                        <div class="list-image">
+                            <img src="turf.jpg" alt="truf image">
+                        </div>
+                        <div class="list-detail">
+                            Tips and tricks: Puppy and Kitten First Grooming
+                        </div>
+                    </div>
+                    <div class="turf-tile">
+                        <div class="list-image">
+                            <img src="turf.jpg" alt="truf image">
+                        </div>
+                        <div class="list-detail">
+                            Tips and tricks: Puppy and Kitten First Grooming
+                        </div>
+                    </div>
+                    <div class="turf-tile">
+                        <div class="list-image">
+                            <img src="turf.jpg" alt="truf image">
+                        </div>
+                        <div class="list-detail">
+                            Tips and tricks: Puppy and Kitten First Grooming
+                        </div>
+                    </div>
+                    <div class="turf-tile">
+                        <div class="list-image">
+                            <img src="turf.jpg" alt="truf image">
+                        </div>
+                        <div class="list-detail">
+                            Tips and tricks: Puppy and Kitten First Grooming
+                        </div>
+                    </div>
+            </div>
+         </div>
+       </div>
+    </section>
+    <section class="aboutus">
+        <div class="abt-us">
+            <div class="left-abt">
+                <img src="abt-img.png">
+            </div>
+            <div class="right-abt">
+                <h2 class="head">About Us</h2>
+                <h1>Explore Your Intrest</h1>
+                <h2 class="sub-abtlft">Skills With Us</h2>
+                <p class="detail-abt">Discover your language potential with us! Join our exciting courses at Salford Academy for a fun language course adventure.</p>
+                <div class="abt-sub">
+                    <div class="expert border-abt"><i class="fa-solid fa-user-graduate"></i>
+                        <div class="abt-txt">Expert Team<br><span>2102+</span></div>
+                    </div>
+                    <div class="expert border-abt"><i class="fa fa-map-marked-alt"></i>
+                        <div class="abt-txt truf-abt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Turf&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<span>50+</span></div>
+                    </div>
+                    <div class="expert border-abt"><i class="fa-solid fa-users-rectangle"></i>
+                        <div class="abt-txt">Players<br><span>55.76k</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="foot">
+        <footer class="footer">
+            <div class="footer-content">
+              <div class="newsletter">
+                <p>Stay in the loop and sign up for the <br>Wardiere newsletter:</p>
+                <div class="email-container">
+                  <input type="email" placeholder="Enter your email">
+                  <button>➜</button>
+                </div>
+              </div>
+          
+              <div class="footer-links">
+                <div class="links-column">
+                  <a href="#">Home</a>
+                  <a href="#">About</a>
+                  <a href="#">Solutions</a>
+                  <a href="#">Pricing</a>
+                  <a href="#">Team</a>
+                  <a href="#">Career</a>
+                </div>
+                <div class="links-column">
+                  <a href="#">Help Centre</a>
+                  <a href="#">Contact</a>
+                  <a href="#">FAQ</a>
+                  <a href="#">Privacy Policy</a>
+                </div>
+                <div class="links-column">
+                  <a href="#">Facebook</a>
+                  <a href="#">Instagram</a>
+                  <a href="#">YouTube</a>
+                  <a href="#">Twitter</a>
+                </div>
+              </div>
+            </div>
+          
+            <div class="footer-bottom">
+              <p>© GameZone Inc. All Rights Reserved 2023</p>
+              <a href="#">Terms & Conditions</a>
+            </div>
+          </footer>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
