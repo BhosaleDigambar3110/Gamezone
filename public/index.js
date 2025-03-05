@@ -102,3 +102,28 @@ document.addEventListener("DOMContentLoaded", function () {
     populateMonthYearSelectors();
     renderCalendar(currentDate);
 });
+const carouselTrack = document.querySelector('.carousel-track');
+const carouselItems = document.querySelectorAll('.carousel-item');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+const cardWidth = 320; // Card width (300px) + 10% visibility (20px)
+let currentIndex = 0;
+
+function updateCarousel() {
+    carouselTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+
+nextBtn.addEventListener('click', () => {
+    if (currentIndex < carouselItems.length - 1) {
+        currentIndex++;
+        updateCarousel();
+    }
+});
+
+prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+    }
+});

@@ -16,7 +16,7 @@
 .navbar .logo {
     font-size: 1.5em;
     font-weight: bold;
-    margin-right: 20px;
+    margin-left: 30px;
     color: #062d3e;
 }
 
@@ -149,85 +149,140 @@
 }
 
 /* Card Slider */
-.slider-container {
-    width: 60%;
-    position: relative;
+
+.carousel-wrapper {
+    width: 500px; /* 300px (card) + 10% visibility */
+    margin: 50px auto;
     display: flex;
     align-items: center;
-    overflow: hidden;
+    justify-content: center;
+    position: relative;
 }
 
-.slider-wrapper {
-    width: 100%;
+.carousel-nav {
+    background-color: #c2c2c2;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Makes it circular */
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px; /* Adds space between buttons and carousel */
+    transition: background-color 0.3s ease;
+}
+
+.carousel-nav:hover {
+    background-color: #217dbb;
+}
+
+.carousel-container {
+    width: 380px; /* Card width + partial visibility */
     overflow: hidden;
     position: relative;
 }
 
-.slider {
+.carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-/* Card */
-.card {
-    flex: 0 0 60%;
-    margin: 0 -10%; /* 20% visibility for adjacent cards */
-    background-size: cover;
-    padding: 20px;
-    border-radius: 16px;
-    border: 2px solid white;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    position: relative;
+.carousel-item {
+    min-width: 300px; /* Main card width */
     height: 200px;
-    width: 300px;
+    margin-right: 20px; /* Creates space for 10% visibility */
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    font-size: 24px;
+    text-align: center;
+    border-radius: 10px; /* Optional: soft rounded corners for cards */
+}
+.carousel-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end; /* Ensures text stays at the bottom */
 }
 
-.card1 { background-image: url('tennis.jpg'); }
-.card2 { background-image: url('basketball.jpg'); }
-.card3 { background-image: url('football.jpg'); }
-
-.card-details {
+/* Overlay to darken background for better readability */
+.carousel-card::after {
+    content: "";
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    z-index: 1;
+}
+
+/* Text container */
+.carousel-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    padding: 12px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: white;
-    padding: 10px;
 }
 
-.card-head {
+/* Title */
+.carousel-details h3 {
     font-size: 18px;
-    font-weight: 600;
+    margin: 0;
+    font-weight: bold;
+    text-align: left;
 }
 
-.other-details {
+/* Larger price */
+.carousel-details .carousel-price {
+    font-size: 24px;
+    margin-top: 4px;
+}
+
+/* Round Trip text */
+.carousel-details p {
     font-size: 14px;
-    padding-bottom: 8px;
+    margin: 2px 0 0;
+    opacity: 0.9;
 }
 
-/* Navigation Buttons */
-.nav-btn {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 18px;
+/* Circular Plus Icon */
+.carousel-plus-icon {
+    width: 36px;
+    height: 36px;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-#prev {
-    left: -50px;
-}
-
-#next {
-    right: -50px;
-}
-
-.nav-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
+.carousel-plus-icon:hover {
+    background: #ddd;
 }
 
 /* Search Bar with Layered Effect */
@@ -239,8 +294,8 @@
     background: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    width: 80%;
-    max-width: 900px;
+    width: 85%;
+    /* max-width: 900px; */
     border-radius: 10px;
     z-index: 10;
 }
@@ -254,10 +309,10 @@
 }
 
 .search-bar-content input[type="text"],
-.search-bar-content input[type="date"],
+/* .search-bar-content input[type="date"], */
 .search-bar-content select {
     width: 100%; /* Ensures all elements take up equal width */
-    max-width: 220px; /* Prevents them from stretching too much */
+    max-width: 350px; /* Prevents them from stretching too much */
     padding: 12px; /* Uniform padding */
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -403,7 +458,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 220px;
+    max-width: 350px;
 }
 
 .input-container input {
@@ -504,9 +559,10 @@
 }
 .truf-list{
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     flex-direction: column;
+    padding-bottom: 10%;
 }
 .turf-tile{
     display: flex;
@@ -599,9 +655,11 @@
 /* footer */
   
 .footer {
-    background: #f8f8f8;
+    background: #d4d4d4;
     padding: 30px 5%;
     text-align: left;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
   }
   
   .footer-content {
@@ -655,15 +713,16 @@
   
   .footer-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-left: 120px;
+    margin-left: 220px;
+    padding-left: 5%;
   }
   
   .links-column {
     display: flex;
     flex-direction: column;
-   padding: 25px;
+    padding: 25px;
   }
   
   .links-column a {
