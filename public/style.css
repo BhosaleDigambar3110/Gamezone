@@ -7,10 +7,12 @@
 } 
 
 .navbar {
+    
     background-color: #ffffff; /* Light gray background, adjust as needed */
     display: flex;
     align-items: center;
     padding: 10px 20px;
+
 }
 
 .navbar .logo {
@@ -125,7 +127,7 @@
     font-size: 60px;
     color: white;
     -webkit-text-stroke: 0.5px black;
-    padding-top: 20px;
+    padding-top: 5%;
     margin: 1.5%;
    
 }
@@ -133,8 +135,8 @@
 .hero-para {
     font-size: 16px;
     color: white;
-    padding-top: 5%;
-    margin-top: 15%;
+    padding-top: 3%;
+    margin-top: 13%;
 }
 
 .hero-btn {
@@ -295,7 +297,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     width: 85%;
-    /* max-width: 900px; */
+    /* max-width: 700px; */
     border-radius: 10px;
     z-index: 10;
 }
@@ -305,26 +307,27 @@
     justify-content: space-around;
     align-items: baseline;
     padding-top: 8px;
-    /* margin-top: 2px; */
+    margin-top: 2px;
 }
 
 .search-bar-content input[type="text"],
-/* .search-bar-content input[type="date"], */
-.search-bar-content select {
+.search-bar-content input[type="date"],
+.search-bar-content select{ 
     width: 100%; /* Ensures all elements take up equal width */
-    max-width: 350px; /* Prevents them from stretching too much */
-    padding: 12px; /* Uniform padding */
+    max-width: 450px;  /*Prevents them from stretching too much */
+    padding: 10px ; /* Uniform padding */
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px; /* Ensures text inside inputs is the same size */
     box-sizing: border-box; /* Prevents extra width from padding */
+    background-color: #e1e1e1;
 }
 
 .search-bar-content {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 8px; /* Adds spacing between elements */
+    gap: 4px; /* Adds spacing between elements */
     flex-wrap: wrap; /* Ensures responsiveness */
 }
 
@@ -335,6 +338,7 @@
     background-color: rgb(32, 76, 235);
     border-radius: 6px;
     border: none;
+    /* margin-left: -18%; */
 }
 
 .search-header ul{
@@ -358,9 +362,10 @@
     width: 200px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    padding: 10px;
+    padding: 8px;
+    /* margin-left: -45%; */
     cursor: pointer;
-    background: white;
+    background-color: #e1e1e1;
 }
 
 .date-display span {
@@ -458,22 +463,23 @@
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 350px;
+    max-width: 450px;
 }
 
 .input-container input {
     width: 100%;
     padding: 12px;
-    padding-right: 35px; /* Space for icon */
+    padding-right: 48px; /* Space for icon */
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     box-sizing: border-box;
+    /* max-width: 450px; */
 }
 
 .location-icon {
     position: absolute;
-    right: 10px;
+    right: 3%;
     font-size: 24px;
     color: #565656; /* Change color if needed */
 }
@@ -484,19 +490,19 @@
 .explore-section{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-between ;
 }
 .explore .explore-main h2{
     padding: 8px;
-    margin-left: 28px;
+    margin-left: 30px;
     color: #062d3e;
-    /* padding-left: 12px; */
+    padding-left: 12px;
 }
 .explorecard{
     width: 400px;
     height: 500px;
     /* border: 1px solid black; */
-    padding: 12px
+    padding: 12px;
 }
 .explorecard img{
     height: 200px;
@@ -508,18 +514,22 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 30px;
+    /* margin-left: -38px; */
+    width: 60%;
 }
 .expo-head{
     font-size: 18px;
     font-weight: 650;
     color:#062d3e;
     padding: 2px;
+    line-height: 2rem;
+    margin-top: 1rem;
 }
 .expo-details{
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 300;
     padding: 2px;
+    line-height: 1.5rem;
 }
 .expo-btn{
     margin-left: 230px;
@@ -553,16 +563,18 @@
 
 /* Right truf list */
 .explore-right{
-    padding: 40px;
-    /* padding-right: 50px; */
-    margin-left: 1%;
+    /* padding: 5%; */
+    padding-right: 0;
+    /* margin-left: 1%; */
 }
 .truf-list{
     display: flex;
-    align-items: start;
+    align-items: end;
     justify-content: center;
     flex-direction: column;
     padding-bottom: 10%;
+    /* padding: 10%; */
+    margin-left: 40%;
 }
 .turf-tile{
     display: flex;
@@ -574,6 +586,14 @@
     height: 80px;
     width: 80px;
     margin-right: 10px;
+    border-radius: 16px;
+}
+.explore-right h2{
+    margin-left: 40% !important;
+    /* margin-top: -13%; */
+    position: sticky !important;
+    font-size: 24px;
+    font-weight: bold;
 }
 /* About-us */
 .abt-us{
@@ -582,11 +602,9 @@
     justify-content: center;
     height: 700px;
 }
-.left-abt{
-    background-image: url('bachground-abtus.jpg');
-}
 .left-abt img{
-    height: 500px;
+    height: 450px;
+    padding-bottom: 5%;
 }
 .right-abt{
   padding: 20px;
@@ -665,18 +683,20 @@
   .footer-content {
     display: flex;
     align-items: center;
-    /* gap: 50px; Increased gap to create empty space below input */
+    height: 350px;
+   gap: 50px; /*  Increased gap to create empty space below input */
   }
   
   .newsletter p {
    font-weight: thin;
+   
   }
   
   .email-container {
     position: relative;
     display: inline-block;
     margin-top: 10px;
-    /* margin-bottom: 40px; Adds empty space below input */
+    margin-bottom: 40px; /*Adds empty space below input*/
   }
   
   .email-container input {
@@ -716,7 +736,8 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-left: 220px;
-    padding-left: 5%;
+    padding-left: 2%;
+    gap: 30px;
   }
   
   .links-column {
